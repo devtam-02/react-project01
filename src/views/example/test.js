@@ -1,31 +1,47 @@
 import React from "react";
 import logo from "../logo.svg";
 import "../App.scss";
-class testss extends React.Component {
-  state = {
-    name: "devTam",
-    email: "nguyentrongtam2x2@gmail.com",
-  };
-  handleOnChangeName = (event) => {
-    this.setState({
-      name: event.target.value,
-    });
-    console.log(event.target);
-  };
-  render() {
-    return (
-      <>
-        <input
-          value={this.state.name}
-          type="text"
-          onChange={(event) => this.handleOnChangeName(event)}
-        />
-        <div className="testss">{this.state.name} dep trai vcl</div>
-        <div className="testss2">
-          email cua {this.state.name} la {this.state.email}
-        </div>
-      </>
-    );
-  }
-}
-export default testss;
+// class Testss extends React.Component {
+//   handleClick = () => {
+//     console.log(this.state);
+//   };
+//   handleOnChangeName = (event) => {
+//     this.setState({
+//       name: event.target.value,
+//     });
+//   };
+//   render() {
+//     console.log(">>> call render: ", this.props);
+//     let { name, age, address, arr } = this.props;
+//     return (
+//       <>
+//         <div className="job-list">
+//           {arr.map((item, index) => {
+//             return (
+//               <div key={item.id}>
+//                 {item.name} : {item.des}
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </>
+//     );
+//   }
+// }
+const Testss = (props) => {
+  let { name, age, address, arr } = props;
+  return (
+    <>
+      <div className="job-list">
+        {arr.map((item, index) => {
+          return (
+            <div key={item.id}>
+              {item.name} : {item.des}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+export default Testss;

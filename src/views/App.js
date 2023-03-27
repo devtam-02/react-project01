@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.scss";
 import React from "react";
 import Testss from "./example/test";
+import Testcomponent from "./example/Testcomponent";
 /**
  * 2 types component
  * + class component
@@ -11,7 +12,7 @@ import Testss from "./example/test";
 function App() {
   return (
     <div className="App">
-      <Testss />
+      <Testcomponent />
     </div>
   );
 }
